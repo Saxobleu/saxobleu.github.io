@@ -83,7 +83,7 @@
         }
     </style>
 </head>
-<body>
+<body class="secondary-body">
 
     <nav class="main-nav">
         <div class="nav-right-container">
@@ -103,19 +103,19 @@
         <form id="contactForm" action="https://formspree.io/f/xoqgkyre" method="POST">
             
             <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="John Doe">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
             </div>
 
             <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="_replyto" required placeholder="john.doe@example.com">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required placeholder="your.email@example.com">
                 <div id="emailError" class="error-message">Please enter a valid email address.</div>
             </div>
 
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required placeholder="Your project details..."></textarea>
+                <textarea id="message" name="message" rows="6" required placeholder="Your message details..."></textarea>
             </div>
 
             <input type="hidden" name="_to" value="valentino.lercher@gmail.com">
@@ -133,14 +133,13 @@
     </main>
 
     <script>
-        // Vérification stricte de l'adresse e-mail en JavaScript avant l'envoi
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             var emailInput = document.getElementById('email');
             var errorDiv = document.getElementById('emailError');
             var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
             if (!emailPattern.test(emailInput.value)) {
-                e.preventDefault(); // Bloque l'envoi du formulaire
+                e.preventDefault();
                 errorDiv.style.display = 'block';
                 emailInput.style.borderColor = '#d9534f';
             } else {
