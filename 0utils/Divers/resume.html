@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Valentino LERCHER - Senior Audio Designer</title>
     <style type="text/css">
-        /* --- STYLES DU MENU DE NAVIGATION (REPRODUCTION EXACTE ET CONFORME À INDEX) --- */
+        /* --- STYLES DU MENU DE NAVIGATION (ALIGNÉ SUR LE BODY GLOBAL) --- */
         .main-nav {
             position: fixed !important;
             top: 0;
@@ -36,22 +36,24 @@
             text-decoration: none;
             font-family: Calibri, sans-serif !important;
             font-size: 16px;
-            font-weight: normal !important; /* Calibri normal, fin et conforme à l'accueil */
+            font-weight: normal !important; /* Conforme à l'accueil (non gras) */
             padding: 5px 0;
             transition: color 0.2s;
         }
         .main-nav li a:hover, .main-nav li a.active {
-            color: #00AEEF; /* Pas de gras, mise en valeur par la couleur uniquement */
+            color: #00AEEF;
         }
 
-        /* --- STYLES DE LA PAGE (FOND NOIR HORS DU CV) --- */
+        /* --- STYLES DE LA PAGE ET DU CONTENEUR --- */
         * { margin: 0; padding: 0; text-indent: 0; }
-        body {
-            background-color: #1a1a1a; /* Fond noir extérieur */
+        
+        /* Prise en compte de la classe secondaire avec le fond noir extérieur */
+        body.secondary-body {
+            background-color: #1a1a1a !important; 
             padding-top: 70px;
         }
         
-        /* Conteneur du CV (Reste sur fond blanc impeccable) */
+        /* Le CV en lui-même reste blanc au centre */
         .resume-page-container {
             max-width: 850px;
             margin: 40px auto;
@@ -61,7 +63,7 @@
             position: relative;
         }
 
-        /* Application stricte de la police Calibri Bold demandée à l'intérieur du CV */
+        /* Calibri Bold strict pour le contenu du CV uniquement */
         h1, h2, h3, .s1, .s2, .section-title-text, strong {
             font-family: Calibri, sans-serif !important;
             font-weight: bold !important;
@@ -87,7 +89,7 @@
             display: block;
         }
 
-        /* Cadre du bandeau de titre collé sur le bord gauche du CV */
+        /* Bandeaux de sections */
         .section-banner-container {
             width: calc(100% + 40px);
             margin-left: -40px;
@@ -101,14 +103,14 @@
             align-items: center;
         }
         
-        /* Titre écrit en BLEU SOMBRE (#25408F) identique à "Valentino LERCHER" */
+        /* Titres des bandeaux en bleu sombre officiel */
         .section-title-text {
             color: #25408F !important;
             font-size: 14pt;
-            padding-left: 45px; /* Aligné sur le retrait général du texte */
+            padding-left: 45px;
         }
 
-        /* Double colonne pour les coordonnées */
+        /* Tableaux et listes */
         .contact-container-table {
             width: 100%;
             border-collapse: collapse;
@@ -132,7 +134,7 @@
 
         /* --- RESPONSIVE SMARTPHONE --- */
         @media (max-width: 768px) {
-            body { padding-top: 60px; }
+            body.secondary-body { padding-top: 60px; }
             .resume-page-container { padding: 20px; margin: 10px; }
             .top-decorative-bar { width: calc(100% + 40px); margin-left: -20px; margin-right: -20px; }
             .section-banner-container { width: calc(100% + 20px); margin-left: -20px; background-size: 100% 38px; }
@@ -146,7 +148,7 @@
         }
     </style>
 </head>
-<body>
+<body class="secondary-body">
 
     <nav class="main-nav">
         <div class="nav-right-container">
