@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Valentino LERCHER - Senior Audio Designer</title>
     <style type="text/css">
-        /* --- 00h58 STYLES DU MENU DE NAVIGATION (REPRODUCTION STRICTE DE INDEX.HTML) --- */
+        /* --- STYLES DU MENU DE NAVIGATION (REPRODUCTION EXACTE ET CONFORME À INDEX) --- */
         .main-nav {
             position: fixed !important;
             top: 0;
@@ -14,43 +14,44 @@
             z-index: 9999 !important;
             background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            font-family: Calibri, sans-serif;
         }
         .nav-right-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 10px 20px;
+            padding: 15px 40px;
+            box-sizing: border-box;
         }
         .main-nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-end; /* Aligné à droite sur les icônes de langues */
         }
         .main-nav li {
-            margin-left: 20px;
+            margin-left: 25px;
         }
         .main-nav li a {
             color: #231F20;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 5px 10px;
+            font-family: Calibri, sans-serif !important;
+            font-size: 16px;
+            font-weight: normal !important; /* Calibri normal, fin et conforme à l'accueil */
+            padding: 5px 0;
             transition: color 0.2s;
         }
         .main-nav li a:hover, .main-nav li a.active {
-            color: #00AEEF;
+            color: #00AEEF; /* Pas de gras, mise en valeur par la couleur uniquement */
         }
 
         /* --- STYLES DE LA PAGE (FOND NOIR HORS DU CV) --- */
         * { margin: 0; padding: 0; text-indent: 0; }
         body {
-            background-color: #1a1a1a; /* Fond noir en dehors du CV */
-            padding-top: 60px;
+            background-color: #1a1a1a; /* Fond noir extérieur */
+            padding-top: 70px;
         }
         
-        /* Le CV reste sur un fond blanc impeccable */
+        /* Conteneur du CV (Reste sur fond blanc impeccable) */
         .resume-page-container {
             max-width: 850px;
             margin: 40px auto;
@@ -60,7 +61,7 @@
             position: relative;
         }
 
-        /* Application stricte de la police Calibri Bold demandée partout */
+        /* Application stricte de la police Calibri Bold demandée à l'intérieur du CV */
         h1, h2, h3, .s1, .s2, .section-title-text, strong {
             font-family: Calibri, sans-serif !important;
             font-weight: bold !important;
@@ -71,7 +72,7 @@
         h2 { color: #00AEEF; font-size: 19pt; }
         p, .s3, .a, a { color: #231F20; font-family: Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; margin: 0pt; }
         
-        /* Barre décorative du haut (Image_001.png) touchant les bords */
+        /* Barre décorative haute (Image_001.png) */
         .top-decorative-bar {
             width: calc(100% + 80px);
             margin-left: -40px;
@@ -86,7 +87,7 @@
             display: block;
         }
 
-        /* Bandeau de titre calé sur le bord gauche */
+        /* Cadre du bandeau de titre collé sur le bord gauche du CV */
         .section-banner-container {
             width: calc(100% + 40px);
             margin-left: -40px;
@@ -100,14 +101,14 @@
             align-items: center;
         }
         
-        /* Texte écrit dans le BLEU SOMBRE EXACT (#25408F) de Valentino LERCHER */
+        /* Titre écrit en BLEU SOMBRE (#25408F) identique à "Valentino LERCHER" */
         .section-title-text {
             color: #25408F !important;
             font-size: 14pt;
-            padding-left: 45px; /* Parfaitement aligné sur le contenu textuel en dessous */
+            padding-left: 45px; /* Aligné sur le retrait général du texte */
         }
 
-        /* Coordonnées en double colonnes face à face */
+        /* Double colonne pour les coordonnées */
         .contact-container-table {
             width: 100%;
             border-collapse: collapse;
@@ -129,18 +130,17 @@
         .header-cv-table { width: 100%; border-collapse: collapse; }
         .header-cv-table td { vertical-align: middle; }
 
-        /* --- MODE SMARTPHONE RESPONSIVE --- */
+        /* --- RESPONSIVE SMARTPHONE --- */
         @media (max-width: 768px) {
-            body { padding-top: 50px; background-color: #1a1a1a; }
+            body { padding-top: 60px; }
             .resume-page-container { padding: 20px; margin: 10px; }
             .top-decorative-bar { width: calc(100% + 40px); margin-left: -20px; margin-right: -20px; }
             .section-banner-container { width: calc(100% + 20px); margin-left: -20px; background-size: 100% 38px; }
             .section-title-text { padding-left: 25px; font-size: 12pt; }
             .contact-container-table td { display: block; width: 100% !important; text-align: left !important; padding-bottom: 10px; }
-            .nav-right-container { padding: 8px 5px; }
+            .nav-right-container { padding: 10px 20px; }
             .main-nav ul { justify-content: center; }
-            .main-nav li { margin: 0 5px; }
-            .main-nav li a { padding: 6px 8px !important; font-size: 13px !important; white-space: nowrap; }
+            .main-nav li { margin: 0 10px; }
             h1 { font-size: 22pt; }
             h2 { font-size: 15pt; }
         }
