@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Valentino LERCHER - Senior Audio Designer</title>
     <style type="text/css">
-        /* --- STYLES DU MENU DE NAVIGATION (IDENTIQUE À INDEX) --- */
+        /* --- 00h58 STYLES DU MENU DE NAVIGATION (REPRODUCTION STRICTE DE INDEX.HTML) --- */
         .main-nav {
             position: fixed !important;
             top: 0;
@@ -43,22 +43,24 @@
             color: #00AEEF;
         }
 
-        /* --- STYLES DU CONTENEUR ET DU CV --- */
+        /* --- STYLES DE LA PAGE (FOND NOIR HORS DU CV) --- */
         * { margin: 0; padding: 0; text-indent: 0; }
         body {
-            background-color: #f9f9f9;
+            background-color: #1a1a1a; /* Fond noir en dehors du CV */
             padding-top: 60px;
         }
+        
+        /* Le CV reste sur un fond blanc impeccable */
         .resume-page-container {
             max-width: 850px;
-            margin: 30px auto;
+            margin: 40px auto;
             background: #ffffff;
             padding: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             position: relative;
         }
 
-        /* Application stricte de la police Calibri Bold demandée */
+        /* Application stricte de la police Calibri Bold demandée partout */
         h1, h2, h3, .s1, .s2, .section-title-text, strong {
             font-family: Calibri, sans-serif !important;
             font-weight: bold !important;
@@ -84,28 +86,28 @@
             display: block;
         }
 
-        /* MÉTHODE DU BANDEAU : Image en fond, le texte est écrit dedans en blanc */
+        /* Bandeau de titre calé sur le bord gauche */
         .section-banner-container {
-            width: calc(100% + 40px); /* S'étire vers la gauche */
+            width: calc(100% + 40px);
             margin-left: -40px;
             height: 38px;
             margin-top: 25px;
             margin-bottom: 15px;
             background-repeat: no-repeat;
-            background-size: 372px 38px; /* Taille exacte de vos images de fond */
+            background-size: 372px 38px;
             background-position: left center;
             display: flex;
             align-items: center;
         }
         
-        /* Positionne le texte à l'intérieur du fond bleu, aligné avec le reste du texte du CV */
+        /* Texte écrit dans le BLEU SOMBRE EXACT (#25408F) de Valentino LERCHER */
         .section-title-text {
-            color: #ffffff !important; /* Écrit en blanc dans le cadre bleu */
+            color: #25408F !important;
             font-size: 14pt;
-            padding-left: 45px; /* Aligne le texte avec le retrait général du CV (40px de marge + 5px) */
+            padding-left: 45px; /* Parfaitement aligné sur le contenu textuel en dessous */
         }
 
-        /* Structure en deux colonnes pour les coordonnées */
+        /* Coordonnées en double colonnes face à face */
         .contact-container-table {
             width: 100%;
             border-collapse: collapse;
@@ -127,9 +129,9 @@
         .header-cv-table { width: 100%; border-collapse: collapse; }
         .header-cv-table td { vertical-align: middle; }
 
-        /* --- AJUSTEMENTS SMARTPHONE --- */
+        /* --- MODE SMARTPHONE RESPONSIVE --- */
         @media (max-width: 768px) {
-            body { padding-top: 50px; }
+            body { padding-top: 50px; background-color: #1a1a1a; }
             .resume-page-container { padding: 20px; margin: 10px; }
             .top-decorative-bar { width: calc(100% + 40px); margin-left: -20px; margin-right: -20px; }
             .section-banner-container { width: calc(100% + 20px); margin-left: -20px; background-size: 100% 38px; }
@@ -205,14 +207,10 @@
         <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 6px; line-height: 14pt;">
             <strong>Civilization VI</strong> - Audio editor, (Firaxis Games) (PC)
         </p>
-        <p style="padding-left: 5px; text-indent: 0pt; line-height: 14pt; text-align: left; margin-bottom: 15px;">
+        <p style="padding-left: 5px; text-indent: 0pt; line-height: 14pt; text-align: left; margin-bottom: 6px;">
             <strong>Ninja Turtles Legends</strong> - Audio Editor, (Ludia) (Phone)
         </p>
-
-        <div class="section-banner-container" style="background-image: url('../img/Image_004.png');">
-            <div class="section-title-text">Dialogue Recording</div>
-        </div>
-        <p style="padding-left: 5px; text-indent: 0pt; line-height: 15pt; text-align: left; margin-bottom: 25px; margin-top: 10px;">
+        <p style="padding-left: 5px; text-indent: 0pt; line-height: 14pt; text-align: left; margin-bottom: 15px;">
             <strong>Horizon Zero Dawn</strong> - Dialogue recording (PS4) french version, Around the word Canada, Guerrilla Games
         </p>
 
