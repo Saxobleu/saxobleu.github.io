@@ -43,7 +43,7 @@
             color: #00AEEF;
         }
 
-        /* --- STYLES CORRIGÉS DU CONTENEUR ET DU CV --- */
+        /* --- STYLES DU CONTENEUR ET DU CV --- */
         * { margin: 0; padding: 0; text-indent: 0; }
         body {
             background-color: #f9f9f9;
@@ -59,7 +59,7 @@
         }
 
         /* Application stricte de la police Calibri Bold demandée */
-        h1, h2, h3, .s1, .s2, strong {
+        h1, h2, h3, .s1, .s2, .section-title-text, strong {
             font-family: Calibri, sans-serif !important;
             font-weight: bold !important;
         }
@@ -67,16 +67,14 @@
         .s1 { color: #25408F; font-size: 19pt; text-decoration: none; }
         h1 { color: #25408F; font-size: 31pt; }
         h2 { color: #00AEEF; font-size: 19pt; }
-        h3 { color: #25408F; font-size: 14pt; }
-        .s2 { color: #25408F; font-size: 14pt; }
         p, .s3, .a, a { color: #231F20; font-family: Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; margin: 0pt; }
         
-        /* Barre décorative Image_001.png qui touche désormais les bords du conteneur */
+        /* Barre décorative du haut (Image_001.png) touchant les bords */
         .top-decorative-bar {
             width: calc(100% + 80px);
             margin-left: -40px;
             margin-right: -40px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             display: block;
         }
         .top-decorative-bar img {
@@ -86,19 +84,37 @@
             display: block;
         }
 
-        /* Bandeaux de titres stylisés en cadres qui partent du bord gauche */
-        .section-banner-title {
-            width: calc(100% + 40px);
+        /* MÉTHODE DU BANDEAU : Image en fond, le texte est écrit dedans en blanc */
+        .section-banner-container {
+            width: calc(100% + 40px); /* S'étire vers la gauche */
             margin-left: -40px;
-            margin-bottom: 10px;
-            margin-top: 20px;
-            position: relative;
-            display: block;
-        }
-        .section-banner-title img {
-            width: 372px; /* Conserve la dimension exacte de l'image d'origine */
             height: 38px;
-            display: block;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            background-repeat: no-repeat;
+            background-size: 372px 38px; /* Taille exacte de vos images de fond */
+            background-position: left center;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Positionne le texte à l'intérieur du fond bleu, aligné avec le reste du texte du CV */
+        .section-title-text {
+            color: #ffffff !important; /* Écrit en blanc dans le cadre bleu */
+            font-size: 14pt;
+            padding-left: 45px; /* Aligne le texte avec le retrait général du CV (40px de marge + 5px) */
+        }
+
+        /* Structure en deux colonnes pour les coordonnées */
+        .contact-container-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+        .contact-container-table td {
+            vertical-align: top;
+            padding: 2px 5px;
         }
 
         .cv-list { list-style: none; padding-left: 0pt; }
@@ -108,7 +124,7 @@
         .cv-table { border-collapse: collapse; width: 100%; margin-top: 10px; }
         .cv-table td { padding-bottom: 8px; }
 
-        .header-cv-table { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
+        .header-cv-table { width: 100%; border-collapse: collapse; }
         .header-cv-table td { vertical-align: middle; }
 
         /* --- AJUSTEMENTS SMARTPHONE --- */
@@ -116,8 +132,9 @@
             body { padding-top: 50px; }
             .resume-page-container { padding: 20px; margin: 10px; }
             .top-decorative-bar { width: calc(100% + 40px); margin-left: -20px; margin-right: -20px; }
-            .section-banner-title { width: calc(100% + 20px); margin-left: -20px; }
-            .section-banner-title img { width: 100%; height: auto; }
+            .section-banner-container { width: calc(100% + 20px); margin-left: -20px; background-size: 100% 38px; }
+            .section-title-text { padding-left: 25px; font-size: 12pt; }
+            .contact-container-table td { display: block; width: 100% !important; text-align: left !important; padding-bottom: 10px; }
             .nav-right-container { padding: 8px 5px; }
             .main-nav ul { justify-content: center; }
             .main-nav li { margin: 0 5px; }
@@ -147,7 +164,7 @@
             <img alt="Ligne décorative" src="../img/Image_001.png"/>
         </div>
 
-        <table class="header-cv-table" style="margin-top: 20px;">
+        <table class="header-cv-table">
             <tr>
                 <td>
                     <h1 style="text-indent: 0pt; text-align: left;">Valentino LERCHER</h1>
@@ -159,20 +176,27 @@
             </tr>
         </table>
 
-        <p style="padding-left: 5px; text-indent: 0pt; line-height: 15pt; text-align: left;">Montréal - (514) 621-4310 &nbsp;&nbsp;|&nbsp;&nbsp; languages: French, Italian, English</p>
-        <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 25px;">
-            <a href="mailto:valentino.lercher@gmail.com" class="a">valentino.lercher@gmail.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-            <a href="http://www.valentinolercher.com/" class="a" target="_blank">www.valentinolercher.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-            <a href="https://www.linkedin.com/in/valentino-lercher-67751661" class="a" target="_blank">LinkedIn</a>
-        </p>
+        <table class="contact-container-table">
+            <tr>
+                <td style="text-align: left; line-height: 16pt;">
+                    <p>Montréal - (514) 621-4310</p>
+                    <p><a href="mailto:valentino.lercher@gmail.com" class="a">valentino.lercher@gmail.com</a></p>
+                    <p><a href="https://www.linkedin.com/in/valentino-lercher-67751661" class="a" target="_blank">LinkedIn</a></p>
+                </td>
+                <td style="text-align: right; line-height: 16pt; width: 320px;">
+                    <div style="display: inline-block; text-align: left;">
+                        <p>languages: French, Italian, English</p>
+                        <p><a href="http://www.valentinolercher.com/" class="a" target="_blank">www.valentinolercher.com</a></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
-        <div class="section-banner-title">
-            <img alt="Section Shipped games" src="../img/Image_003.png"/>
+        <div class="section-banner-container" style="background-image: url('../img/Image_003.png');">
+            <div class="section-title-text">Shipped games</div>
         </div>
         
-        <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 8px;">Shipped games</h3>
-        
-        <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 6px; line-height: 14pt;">
+        <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 6px; line-height: 14pt; margin-top: 10px;">
             <strong>South of Midnight</strong> - Sound Designer / Audio Designer - audio implementation (Wwise), Compulsion Games
         </p>
         <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 6px; line-height: 14pt;">
@@ -185,14 +209,16 @@
             <strong>Ninja Turtles Legends</strong> - Audio Editor, (Ludia) (Phone)
         </p>
 
-        <div class="section-banner-title">
-            <img alt="Section Dialogue Recording" src="../img/Image_004.png"/>
+        <div class="section-banner-container" style="background-image: url('../img/Image_004.png');">
+            <div class="section-title-text">Dialogue Recording</div>
         </div>
-        <p style="padding-left: 5px; text-indent: 0pt; line-height: 15pt; text-align: left; margin-bottom: 25px;">
+        <p style="padding-left: 5px; text-indent: 0pt; line-height: 15pt; text-align: left; margin-bottom: 25px; margin-top: 10px;">
             <strong>Horizon Zero Dawn</strong> - Dialogue recording (PS4) french version, Around the word Canada, Guerrilla Games
         </p>
 
-        <p class="s2" style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Professional experience</p>
+        <div class="section-banner-container" style="background-image: url('../img/Image_003.png');">
+            <div class="section-title-text">Professional experience</div>
+        </div>
         
         <table class="cv-table">
             <tr>
@@ -223,23 +249,21 @@
             </tr>
         </table>
 
-        <div class="section-banner-title">
-            <img alt="Section Skills" src="../img/Image_005.png"/>
+        <div class="section-banner-container" style="background-image: url('../img/Image_005.png');">
+            <div class="section-title-text">Skills</div>
         </div>
-        <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Skills</h3>
         
-        <ul class="cv-list" style="padding-left: 5px; margin-bottom: 25px;">
+        <ul class="cv-list" style="padding-left: 5px; margin-bottom: 25px; margin-top: 10px;">
             <li style="margin-bottom: 4px;"><p class="s3">Video sound design: Foley, sound effects, soundscaping, voice</p></li>
             <li style="margin-bottom: 4px;"><p class="s3">Sound recording: sound effects, voice</p></li>
             <li><p class="s3">Working knowledge of: Protools, Reaper, Perforce, Unreal Engine, Wwise</p></li>
         </ul>
 
-        <div class="section-banner-title">
-            <img alt="Section Academics" src="../img/Image_006.png"/>
+        <div class="section-banner-container" style="background-image: url('../img/Image_006.png');">
+            <div class="section-title-text">Academics</div>
         </div>
-        <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Academics</h3>
 
-        <table class="cv-table">
+        <table class="cv-table" style="margin-top: 10px;">
             <tr>
                 <td style="width: 85px;" class="s3">2014-15</td>
                 <td class="s3">Minor in Video Game Studies UDeM - University of Montreal</td>
