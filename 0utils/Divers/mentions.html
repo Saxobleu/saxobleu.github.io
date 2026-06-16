@@ -8,56 +8,69 @@
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .legal-container {
-            max-width: 750px;
+            max-width: 800px;
             margin: 60px auto;
             padding: 40px;
             background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            font-family: sans-serif;
-            line-height: 1.7;
-            color: #333;
+            font-family: 'Calibri', sans-serif;
+            color: #231F20;
+            line-height: 1.6;
         }
         .legal-container h1 {
-            font-size: 28px;
-            color: #111;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            text-align: center;
+            font-size: 32px;
+            color: #25408F;
+            margin: 0 0 5px 0;
+            font-weight: bold;
+        }
+        .legal-container h2 {
+            font-size: 18px;
+            color: #00AEEF;
+            margin: 0 0 25px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .legal-section {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
-        .legal-section h2 {
-            font-size: 18px;
-            color: #222;
-            margin-bottom: 10px;
+        .legal-section h3 {
+            font-size: 16px;
+            color: #25408F;
+            border-bottom: 2px solid #25408F;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         .legal-section p {
             font-size: 15px;
-            color: #555;
             margin: 0 0 10px 0;
         }
         .legal-section a {
-            color: #111;
+            color: #231F20;
             text-decoration: underline;
+            font-weight: bold;
         }
         .legal-section a:hover {
-            color: #555;
+            color: #25408F;
         }
         .credits-divider {
             margin: 40px 0 20px 0;
             border: 0;
-            border-top: 2px solid #eee;
+            border-top: 2px solid #25408F;
+        }
+        @media (max-width: 768px) {
+            .legal-container {
+                padding: 20px;
+                margin: 20px auto;
+            }
         }
     </style>
 </head>
 <body class="secondary-body">
 
-    <!-- Menu nettoyé de l'onglet Contact et pointant vers resume.html -->
     <nav class="main-nav">
         <div class="nav-right-container">
             <ul>
@@ -70,44 +83,39 @@
 
     <main class="legal-container">
         <h1>Legal Notices</h1>
+        <h2>Website Information</h2>
         
         <div class="legal-section">
-            <h2>1. Presentation</h2>
+            <h3>1. Presentation</h3>
             <p><strong>Website Owner:</strong> Valentino LERCHER</p>
             <p><strong>Professional Activity:</strong> Senior Audio Designer</p>
-            <p><strong>Official Portfolio:</strong> <a href="https://valentinolercher.com">https://valentinolercher.com</a></p>
+            <p><strong>Official Portfolio:</strong> <a href="https://www.valentinolercher.com">www.valentinolercher.com</a></p>
         </div>
 
         <div class="legal-section">
-            <h2>2. Hosting Provider</h2>
+            <h3>2. Hosting Provider</h3>
             <p>This portfolio is hosted as a static website via the GitHub Pages infrastructure.</p>
             <p><strong>Provider:</strong> GitHub, Inc.</p>
             <p><strong>Corporate Address:</strong> 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
-            <p><strong>Official Site:</strong> <a href="https://pages.github.com" target="_blank" rel="noopener">pages.github.com</a></p>
         </div>
 
         <div class="legal-section">
-            <h2>3. Intellectual Property</h2>
+            <h3>3. Intellectual Property</h3>
             <p>All content featured on this website—including texts, graphical assets, images, audio designs, and video reels—is the exclusive intellectual property of Valentino LERCHER or its respective licensors (including Compulsion Games, Signal Space Lab, and Syllabes).</p>
             <p>Any reproduction, distribution, or unauthorized commercial layout use of these materials without clear prior written consent is strictly prohibited.</p>
         </div>
 
         <div class="legal-section">
-            <h2>4. Privacy & GDPR Compliance</h2>
+            <h3>4. Privacy & GDPR Compliance</h3>
             <p>This portfolio values user privacy. It operates purely for presentation purposes:</p>
             <p>• No tracking or analytic cookies are installed.</p>
             <p>• No user databases are constructed or maintained on this infrastructure.</p>
         </div>
 
-        <div class="legal-section">
-            <h2>5. External Platforms</h2>
-            <p>Links pointing to external social or content platforms (such as LinkedIn and YouTube) follow their respective privacy terms and tracking parameters, which remain external to this domain's control.</p>
-        </div>
-
         <hr class="credits-divider">
 
         <div class="legal-section" style="margin-bottom: 10px;">
-            <h2>Credits</h2>
+            <h3>Credits</h3>
             <p><strong>Publication Director:</strong> Gérard ALLEON</p>
             <p><strong>Editorial Manager:</strong> Valentino LERCHER</p>
             <p><strong>Graphic Design Manager:</strong> Marianne SINKO</p>
