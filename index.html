@@ -7,9 +7,8 @@
     <link rel="icon" type="image/x-icon" href="0utils/img/Icone_val.ico">
     <link rel="stylesheet" href="0utils/css/style.css">
     <style>
-        /* --- CORRECTIF COUPE-FILE POUR LE MENU FIXE ET LA VIDÉO --- */
+        /* --- CONFIGURATION DU MENU FIXE ET DE LA VIDÉO --- */
         
-        /* 1. Verrouiller le menu tout en haut de l'écran */
         .main-nav {
             position: fixed !important;
             top: 0;
@@ -20,12 +19,10 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* Ajouter de l'espace en haut de la bannière pour compenser le menu fixe */
         .main-header {
             margin-top: 60px !important;
         }
 
-        /* 2. Forcer l'affichage de la vidéo (Contournement des bugs CSS) */
         .video-responsive-container {
             position: relative !important;
             padding-bottom: 56.25% !important; /* Format 16:9 */
@@ -38,16 +35,7 @@
             display: block !important;
             clear: both;
         }
-        .video-responsive-container iframe {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            border: 0 !important;
-        }
 
-        /* 3. Ajustement ultra-précis pour les téléphones portables */
         @media (max-width: 768px) {
             .nav-right-container {
                 padding-left: 2px !important;
@@ -60,15 +48,11 @@
                 margin: 0 !important;
                 width: 100% !important;
             }
-            .main-nav li {
-                margin: 0 !important;
-                padding: 0 !important;
-            }
             .main-nav li a {
-                padding: 8px 6px !important; /* Réduction maximale des espaces internes */
-                font-size: 13px !important;   /* Légère réduction de la police pour éviter le saut de ligne */
-                letter-spacing: -0.3px !important; /* Resserre les lettres si nécessaire */
-                white-space: nowrap !important; /* Interdit formellement au texte de se couper */
+                padding: 8px 6px !important;
+                font-size: 13px !important;
+                letter-spacing: -0.3px !important;
+                white-space: nowrap !important;
             }
             .main-header {
                 margin-top: 50px !important;
@@ -116,29 +100,21 @@
                 </a>
             </h2>
             
-            <!-- Bloc vidéo sécurisé et prioritaire 
             <div class="video-responsive-container">
-                <iframe 
-                    src="https://www.youtube-nocookie.com/embed/wGshWq7zyRU?rel=0&modestbranding=1" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>  -->
-			
-			<!-- Bloc vidéo de secours standard -->
-<div class="video-responsive-container">
                 <object 
-                    data="https://www.youtube.com/v/dSL-YKQHzB4?rel=0&modestbranding=1" 
+                    data="https://www.youtube.com/v/wGshWq7zyRU?rel=0&modestbranding=1" 
                     type="text/html" 
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                     <iframe 
-                        src="https://www.youtube.com/embed/dSL-YKQHzB4?rel=0&modestbranding=1" 
+                        src="https://www.youtube.com/embed/wGshWq7zyRU?rel=0&modestbranding=1" 
                         title="Valentino LERCHER — Demo Reel"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
+                        allowfullscreen 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
                     </iframe>
                 </object>
             </div>
+
         </section>
 
         <section class="side-column games">
