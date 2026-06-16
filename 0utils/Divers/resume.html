@@ -7,6 +7,24 @@
     <link rel="icon" type="image/x-icon" href="../img/Icone_val.ico">
     <link rel="stylesheet" href="../css/style.css">
     <style>
+	
+	/* Bloquer le menu en haut de la page */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff; /* Ajustez la couleur selon votre charte (ex: couleur de fond du site) */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Petite ombre discrète sous le menu fixé */
+}
+
+/* On ajoute une marge en haut du conteneur principal pour éviter que le menu fixé ne cache le début du texte */
+.resume-container, .legal-container {
+    margin-top: 100px !important; /* Force l'espace sous le menu fixe */
+}
+
+
         .resume-container {
             max-width: 800px;
             margin: 60px auto;
@@ -136,7 +154,27 @@
                 max-width: 100%;
                 text-align: center;
             }
-        }
+        /* Réduction des marges globales du menu */
+    .nav-right-container {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    
+    .main-nav ul {
+        display: flex;
+        justify-content: center; /* Centre le menu sur mobile */
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Réduction de l'espace interne de chaque lien du menu */
+    .main-nav li a {
+        padding: 8px 10px !important; /* Réduit l'espace horizontal à 10px au lieu de 15px ou 20px */
+        font-size: 14px !important;    /* Diminue très légèrement la taille du texte pour gagner les précieux pixels manquants */
+        letter-spacing: 0px !important; /* Évite l'étirement des lettres */
+    }
+}
+		
     </style>
 </head>
 <body class="secondary-body">
