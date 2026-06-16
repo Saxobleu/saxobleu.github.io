@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Valentino LERCHER - Senior Audio Designer</title>
     <style type="text/css">
-        /* --- STYLES DU MENU DE NAVIGATION FIXE --- */
+        /* --- STYLES DU MENU DE NAVIGATION (IDENTIQUE À INDEX) --- */
         .main-nav {
             position: fixed !important;
             top: 0;
@@ -43,11 +43,11 @@
             color: #00AEEF;
         }
 
-        /* --- DESIGN D'ORIGINE DU CV --- */
+        /* --- STYLES CORRIGÉS DU CONTENEUR ET DU CV --- */
         * { margin: 0; padding: 0; text-indent: 0; }
         body {
             background-color: #f9f9f9;
-            padding-top: 60px; /* Espace requis pour ne pas masquer le haut sous le menu fixe */
+            padding-top: 60px;
         }
         .resume-page-container {
             max-width: 850px;
@@ -55,37 +55,75 @@
             background: #ffffff;
             padding: 40px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
         }
-        .s1 { color: #25408F; font-family:"Arial Narrow", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 19pt; }
-        h1 { color: #25408F; font-family:"Arial Narrow", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 31pt; }
-        h2 { color: #00AEEF; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 19pt; }
-        p { color: #231F20; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; margin:0pt; }
-        .a, a { color: #231F20; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
-        h3 { color: #25408F; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; }
-        .s2 { color: #25408F; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; }
-        .s3 { color: #231F20; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+
+        /* Application stricte de la police Calibri Bold demandée */
+        h1, h2, h3, .s1, .s2, strong {
+            font-family: Calibri, sans-serif !important;
+            font-weight: bold !important;
+        }
+
+        .s1 { color: #25408F; font-size: 19pt; text-decoration: none; }
+        h1 { color: #25408F; font-size: 31pt; }
+        h2 { color: #00AEEF; font-size: 19pt; }
+        h3 { color: #25408F; font-size: 14pt; }
+        .s2 { color: #25408F; font-size: 14pt; }
+        p, .s3, .a, a { color: #231F20; font-family: Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; margin: 0pt; }
         
+        /* Barre décorative Image_001.png qui touche désormais les bords du conteneur */
+        .top-decorative-bar {
+            width: calc(100% + 80px);
+            margin-left: -40px;
+            margin-right: -40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .top-decorative-bar img {
+            width: 100%;
+            height: auto;
+            max-height: 15px;
+            display: block;
+        }
+
+        /* Bandeaux de titres stylisés en cadres qui partent du bord gauche */
+        .section-banner-title {
+            width: calc(100% + 40px);
+            margin-left: -40px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            position: relative;
+            display: block;
+        }
+        .section-banner-title img {
+            width: 372px; /* Conserve la dimension exacte de l'image d'origine */
+            height: 38px;
+            display: block;
+        }
+
         .cv-list { list-style: none; padding-left: 0pt; }
-        .cv-list > li > *:first-child:before { content: "• "; color: #231F20; font-family:Calibri, sans-serif; font-size: 12pt; }
+        .cv-list > li > *:first-child:before { content: "• "; color: #231F20; font-family: Calibri, sans-serif; font-size: 12pt; }
         
         table, tbody { vertical-align: top; overflow: visible; }
         .cv-table { border-collapse: collapse; width: 100%; margin-top: 10px; }
         .cv-table td { padding-bottom: 8px; }
 
-        .header-cv-table { width: 100%; margin-bottom: 20px; }
+        .header-cv-table { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
         .header-cv-table td { vertical-align: middle; }
 
         /* --- AJUSTEMENTS SMARTPHONE --- */
         @media (max-width: 768px) {
             body { padding-top: 50px; }
             .resume-page-container { padding: 20px; margin: 10px; }
+            .top-decorative-bar { width: calc(100% + 40px); margin-left: -20px; margin-right: -20px; }
+            .section-banner-title { width: calc(100% + 20px); margin-left: -20px; }
+            .section-banner-title img { width: 100%; height: auto; }
             .nav-right-container { padding: 8px 5px; }
             .main-nav ul { justify-content: center; }
             .main-nav li { margin: 0 5px; }
             .main-nav li a { padding: 6px 8px !important; font-size: 13px !important; white-space: nowrap; }
-            h1 { font-size: 24pt; line-height: 28pt; }
+            h1 { font-size: 22pt; }
             h2 { font-size: 15pt; }
-            .header-cv-table img { width: 65px; height: 65px; }
         }
     </style>
 </head>
@@ -103,20 +141,20 @@
 
     <div class="resume-page-container">
         
-        <p style="text-indent: 0pt; text-align: left; margin-bottom: 15px;">
-            <span><img width="100%" height="auto" style="max-height:15px;" alt="Ligne décorative" src="../img/Image_001.png"/></span>
-        </p>
-        
-        <p class="s1" style="text-indent: 0pt; text-align: right; margin-bottom: 20px;">CURRICULUM VITAE</p>
+        <p class="s1" style="text-indent: 0pt; text-align: right; margin-bottom: 10px;">CURRICULUM VITAE</p>
 
-        <table class="header-cv-table">
+        <div class="top-decorative-bar">
+            <img alt="Ligne décorative" src="../img/Image_001.png"/>
+        </div>
+
+        <table class="header-cv-table" style="margin-top: 20px;">
             <tr>
-                <td style="width: 95px;">
-                    <span><img width="82" height="82" alt="Photo Valentino" src="../img/QRCode_CV.png"/></span>
-                </td>
                 <td>
                     <h1 style="text-indent: 0pt; text-align: left;">Valentino LERCHER</h1>
-                    <h2 style="text-indent: 0pt; text-align: left;">Senior Audio Designer</h2>
+                    <h2 style="text-indent: 0pt; text-align: left; margin-top: 5px;">Senior Audio Designer</h2>
+                </td>
+                <td style="width: 95px; text-align: right;">
+                    <span><img width="82" height="82" alt="QRCode CV" src="../img/QRCode_CV.png"/></span>
                 </td>
             </tr>
         </table>
@@ -128,9 +166,9 @@
             <a href="https://www.linkedin.com/in/valentino-lercher-67751661" class="a" target="_blank">LinkedIn</a>
         </p>
 
-        <p style="text-indent: 0pt; text-align: left; margin-bottom: 10px;">
-            <span><img width="372" height="38" alt="Section Shipped games" src="../img/Image_003.png"/></span>
-        </p>
+        <div class="section-banner-title">
+            <img alt="Section Shipped games" src="../img/Image_003.png"/>
+        </div>
         
         <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 8px;">Shipped games</h3>
         
@@ -147,9 +185,9 @@
             <strong>Ninja Turtles Legends</strong> - Audio Editor, (Ludia) (Phone)
         </p>
 
-        <p style="text-indent: 0pt; text-align: left; margin-bottom: 10px;">
-            <span><img width="373" height="38" alt="Section Dialogue Recording" src="../img/Image_004.png"/></span>
-        </p>
+        <div class="section-banner-title">
+            <img alt="Section Dialogue Recording" src="../img/Image_004.png"/>
+        </div>
         <p style="padding-left: 5px; text-indent: 0pt; line-height: 15pt; text-align: left; margin-bottom: 25px;">
             <strong>Horizon Zero Dawn</strong> - Dialogue recording (PS4) french version, Around the word Canada, Guerrilla Games
         </p>
@@ -178,16 +216,16 @@
                 <td class="s3">
                     <ul class="cv-list">
                         <li><p class="s3">Internship at Ubisoft Montréal as audio designer and voice designer for the project «Shine» during the Ubisoft Academia summer school</p></li>
-                        <li style="margin-top: 4px;"><p class="s3">Sound recordist of the pilot «Bienvenue», offered to Radio-Canada for production consideration</p></li>
-                        <li style="margin-top: 4px;"><p class="s3">Other shooting sessions in Montreal, including the video «ReROLL Announcement Trailer»</p></li>
+                        <li style="margin-top: 4px;"><p class="s3">sound recordist of the pilot «Bienvenue», offered to Radio-Canada for production consideration</p></li>
+                        <li style="margin-top: 4px;"><p class="s3">other shooting sessions in Montreal, including the video «ReROLL Announcement Trailer»</p></li>
                     </ul>
                 </td>
             </tr>
         </table>
 
-        <p style="text-indent: 0pt; text-align: left; margin-top: 20px; margin-bottom: 10px;">
-            <span><img width="372" height="38" alt="Section Skills" src="../img/Image_005.png"/></span>
-        </p>
+        <div class="section-banner-title">
+            <img alt="Section Skills" src="../img/Image_005.png"/>
+        </div>
         <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Skills</h3>
         
         <ul class="cv-list" style="padding-left: 5px; margin-bottom: 25px;">
@@ -196,9 +234,9 @@
             <li><p class="s3">Working knowledge of: Protools, Reaper, Perforce, Unreal Engine, Wwise</p></li>
         </ul>
 
-        <p style="text-indent: 0pt; text-align: left; margin-bottom: 10px;">
-            <span><img width="372" height="38" alt="Section Academics" src="../img/Image_006.png"/></span>
-        </p>
+        <div class="section-banner-title">
+            <img alt="Section Academics" src="../img/Image_006.png"/>
+        </div>
         <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Academics</h3>
 
         <table class="cv-table">
@@ -208,7 +246,7 @@
             </tr>
             <tr>
                 <td class="s3" style="vertical-align: top;">2012-13</td>
-                <td class="s3">Specialized training as sound designer of videogames at ISTDS - Institut Supérieur des techniques de design sonore, Montréal</td>
+                <td class="s3">specialized training as sound designer of videogames at ISTDS - Institut Supérieur des techniques de design sonore, Montréal</td>
             </tr>
             <tr>
                 <td class="s3">2010-12</td>
@@ -218,8 +256,8 @@
                 <td class="s3" style="vertical-align: top;">2011</td>
                 <td class="s3">
                     <ul class="cv-list">
-                        <li style="margin-bottom: 4px;"><p class="s3">Study of sound impact on the underwater environment for the Italian marine corps, Livorno, Italy</p></li>
-                        <li><p class="s3">Assistant at DBW Communication (movie and 3D-video production), Rome, Italy</p></li>
+                        <li style="margin-bottom: 4px;"><p class="s3">study of sound impact on the underwater environment for the Italian marine corps, Livorno, Italy</p></li>
+                        <li><p class="s3">assistant at DBW Communication (movie and 3D-video production), Rome, Italy</p></li>
                     </ul>
                 </td>
             </tr>
@@ -229,14 +267,12 @@
             </tr>
         </table>
 
-
-<!-- Bouton discret de téléchargement du PDF -->
         <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px dashed #25408F;">
             <a href="Resume_Valentino_LERCHER_2026.pdf" download="Resume_Valentino_LERCHER_2026.pdf" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #ffffff; color: #25408F; border: 2px solid #25408F; border-radius: 4px; font-family: 'Calibri', sans-serif; font-size: 15px; font-weight: bold; text-decoration: none; transition: all 0.3s ease;">
                 <span style="margin-right: 8px;">📥</span> Download Resume (PDF)
             </a>
         </div>
-		
+
     </div>
 
 </body>
