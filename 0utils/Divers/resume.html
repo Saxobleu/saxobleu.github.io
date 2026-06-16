@@ -1,183 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Valentino LERCHER</title>
-    <link rel="icon" type="image/x-icon" href="../img/Icone_val.ico">
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-	
-	/* Bloquer le menu en haut de la page */
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #ffffff; /* Ajustez la couleur selon votre charte (ex: couleur de fond du site) */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Petite ombre discrète sous le menu fixé */
-}
-
-/* On ajoute une marge en haut du conteneur principal pour éviter que le menu fixé ne cache le début du texte */
-.resume-container, .legal-container {
-    margin-top: 100px !important; /* Force l'espace sous le menu fixe */
-}
-
-
-        .resume-container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            font-family: 'Calibri', sans-serif;
-            position: relative;
-            color: #231F20;
-        }
-        
-        /* Isolation du QR Code en dehors du flux textuel principal */
-        .qr-code-zone {
-            position: absolute;
-            top: 40px;
-            right: 40px;
-            text-align: center;
-            width: 100px;
-        }
-        .qr-code-zone img {
+    <title>CV Valentino LERCHER - Senior Audio Designer</title>
+    <style type="text/css">
+        /* --- STYLES DU MENU DE NAVIGATION FIXE --- */
+        .main-nav {
+            position: fixed !important;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            border: 1px solid #eee;
-            padding: 4px;
-            background: #fff;
+            z-index: 9999 !important;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-family: Calibri, sans-serif;
         }
-        .qr-code-zone p {
-            font-size: 11px;
-            color: #25408F;
-            margin: 5px 0 0 0;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 0.5px;
+        .nav-right-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
         }
-
-        .resume-header {
-            margin-bottom: 35px;
-            max-width: 70%;
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
         }
-        .resume-header h1 {
-            font-size: 32px;
-            color: #25408F;
-            margin: 0 0 5px 0;
-            font-weight: bold;
+        .main-nav li {
+            margin-left: 20px;
         }
-        .resume-header h2 {
-            font-size: 18px;
-            color: #00AEEF;
-            margin: 0 0 15px 0;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .contact-info {
+        .main-nav li a {
+            color: #231F20;
+            text-decoration: none;
             font-size: 14px;
-            line-height: 1.6;
-        }
-        .contact-info a {
-            color: #231F20;
-            text-decoration: underline;
-        }
-        .contact-info a:hover {
-            color: #25408F;
-        }
-
-        .resume-section {
-            margin-bottom: 35px;
-        }
-        .resume-section h3 {
-            font-size: 16px;
-            color: #25408F;
-            border-bottom: 2px solid #25408F;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Liste des Shipped Games */
-        .game-item {
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-        .game-item strong {
-            color: #111;
-        }
-
-        /* Tableaux d'expérience et d'études */
-        .resume-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .resume-table tr {
-            vertical-align: top;
-        }
-        .resume-table td {
-            padding-bottom: 15px;
-            line-height: 1.5;
-        }
-        .date-col {
-            width: 90px;
             font-weight: bold;
-            color: #25408F;
+            padding: 5px 10px;
+            transition: color 0.2s;
         }
+        .main-nav li a:hover, .main-nav li a.active {
+            color: #00AEEF;
+        }
+
+        /* --- DESIGN D'ORIGINE DU CV --- */
+        * { margin: 0; padding: 0; text-indent: 0; }
+        body {
+            background-color: #f9f9f9;
+            padding-top: 60px; /* Espace requis pour ne pas masquer le haut sous le menu fixe */
+        }
+        .resume-page-container {
+            max-width: 850px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .s1 { color: #25408F; font-family:"Arial Narrow", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 19pt; }
+        h1 { color: #25408F; font-family:"Arial Narrow", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 31pt; }
+        h2 { color: #00AEEF; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 19pt; }
+        p { color: #231F20; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; margin:0pt; }
+        .a, a { color: #231F20; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+        h3 { color: #25408F; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; }
+        .s2 { color: #25408F; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; }
+        .s3 { color: #231F20; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
         
-        .resume-list {
-            padding-left: 20px;
-            margin-top: 5px;
-        }
-        .resume-list li {
-            margin-bottom: 5px;
-            line-height: 1.5;
-        }
+        .cv-list { list-style: none; padding-left: 0pt; }
+        .cv-list > li > *:first-child:before { content: "• "; color: #231F20; font-family:Calibri, sans-serif; font-size: 12pt; }
+        
+        table, tbody { vertical-align: top; overflow: visible; }
+        .cv-table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        .cv-table td { padding-bottom: 8px; }
 
+        .header-cv-table { width: 100%; margin-bottom: 20px; }
+        .header-cv-table td { vertical-align: middle; }
+
+        /* --- AJUSTEMENTS SMARTPHONE --- */
         @media (max-width: 768px) {
-            .resume-container {
-                padding: 20px;
-                margin: 20px auto;
-            }
-            .qr-code-zone {
-                position: static;
-                width: 90px;
-                margin: 0 auto 20px auto;
-            }
-            .resume-header {
-                max-width: 100%;
-                text-align: center;
-            }
-        /* Réduction des marges globales du menu */
-    .nav-right-container {
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-    }
-    
-    .main-nav ul {
-        display: flex;
-        justify-content: center; /* Centre le menu sur mobile */
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Réduction de l'espace interne de chaque lien du menu */
-    .main-nav li a {
-        padding: 8px 10px !important; /* Réduit l'espace horizontal à 10px au lieu de 15px ou 20px */
-        font-size: 14px !important;    /* Diminue très légèrement la taille du texte pour gagner les précieux pixels manquants */
-        letter-spacing: 0px !important; /* Évite l'étirement des lettres */
-    }
-}
-		
+            body { padding-top: 50px; }
+            .resume-page-container { padding: 20px; margin: 10px; }
+            .nav-right-container { padding: 8px 5px; }
+            .main-nav ul { justify-content: center; }
+            .main-nav li { margin: 0 5px; }
+            .main-nav li a { padding: 6px 8px !important; font-size: 13px !important; white-space: nowrap; }
+            h1 { font-size: 24pt; line-height: 28pt; }
+            h2 { font-size: 15pt; }
+            .header-cv-table img { width: 65px; height: 65px; }
+        }
     </style>
 </head>
-<body class="secondary-body">
+<body>
 
     <nav class="main-nav">
         <div class="nav-right-container">
@@ -189,140 +101,135 @@
         </div>
     </nav>
 
-<main class="resume-container">
+    <div class="resume-page-container">
         
-        <!-- Zone QR Code isolée mise à jour -->
-        <div class="qr-code-zone">
-            <img src="../img/QRCode_CV.png" alt="Scan to visit portfolio">
-            <p>Portfolio</p>
-        </div>
+        <p style="text-indent: 0pt; text-align: left; margin-bottom: 15px;">
+            <span><img width="100%" height="auto" style="max-height:15px;" alt="Ligne décorative" src="../img/Image_001.png"/></span>
+        </p>
+        
+        <p class="s1" style="text-indent: 0pt; text-align: right; margin-bottom: 20px;">CURRICULUM VITAE</p>
 
-        <header class="resume-header">
-            <h1>Valentino LERCHER</h1>
-            <h2>Senior Audio Designer</h2>
-            <div class="contact-info">
-                <p style="margin-bottom: 10px; color: #231F20; font-size: 15px;"><strong>Location:</strong> Montréal, QC, Canada &nbsp;|&nbsp; <strong>Phone:</strong> (514) 621-4310</p>
-                <p style="margin-bottom: 15px; color: #231F20; font-size: 15px;"><strong>Languages:</strong> French, Italian, English</p>
-                
-                <p style="margin-bottom: 8px; color: #231F20; font-size: 15px;"><strong>Email:</strong> <a href="mailto:valentino.lercher@gmail.com" style="color: #231F20; font-weight: bold; text-decoration: underline;">valentino.lercher@gmail.com</a></p>
-                <p style="margin-bottom: 8px; color: #231F20; font-size: 15px;"><strong>Website:</strong> <a href="https://www.valentinolercher.com" target="_blank" rel="noopener" style="color: #231F20; font-weight: bold; text-decoration: underline;">www.valentinolercher.com</a></p>
-                <p style="margin-top: 12px; padding-top: 4px;">
-                    <a href="https://www.linkedin.com/in/valentino-lercher-67751661" target="_blank" rel="noopener" style="text-decoration: none; display: inline-flex; align-items: center; font-weight: bold;">
-                        <img src="../img/Linkedin.png" alt="LinkedIn" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;">
-                        <span style="text-decoration: underline; color: #231F20; font-size: 15px;">Connect on LinkedIn</span>
-                    </a>
-                </p>
-            </div>
-        </header>	
-	
-        <section class="resume-section">
-            <h3>Shipped Games</h3>
-            <div class="game-item">
-                <strong>South of Midnight</strong> – Sound Designer / Audio Designer (Audio implementation via Wwise), Compulsion Games
-            </div>
-            <div class="game-item">
-                <strong>We Happy Few</strong> – Sound Designer / Audio Designer (Audio implementation via Wwise), Compulsion Games
-            </div>
-            <div class="game-item">
-                <strong>Civilization VI</strong> – Audio Editor (Firaxis Games) [PC]
-            </div>
-            <div class="game-item">
-                <strong>Teenage Mutant Ninja Turtles: Legends</strong> – Audio Editor (Ludia) [Mobile]
-            </div>
-            <div class="game-item">
-                <strong>Horizon Zero Dawn</strong> – Dialogue Recording (French Version, PS4), Around the Word Canada / Guerrilla Games
-            </div>
-        </section>
+        <table class="header-cv-table">
+            <tr>
+                <td style="width: 95px;">
+                    <span><img width="82" height="82" alt="Photo Valentino" src="../img/Image_002.jpg"/></span>
+                </td>
+                <td>
+                    <h1 style="text-indent: 0pt; text-align: left;">Valentino LERCHER</h1>
+                    <h2 style="text-indent: 0pt; text-align: left;">Senior Audio Designer</h2>
+                </td>
+            </tr>
+        </table>
 
-        <section class="resume-section">
-            <h3>Professional Experience</h3>
-            <table class="resume-table">
-                <tr>
-                    <td class="date-col">2022 - 2026</td>
-                    <td><strong>Senior Audio Designer</strong> – Compulsion Games, Montréal</td>
-                </tr>
-                <tr>
-                    <td class="date-col">2019 - 2022</td>
-                    <td><strong>Audio Designer</strong> – Compulsion Games, Montréal</td>
-                </tr>
-                <tr>
-                    <td class="date-col">2015 - 2018</td>
-                    <td><strong>Audio Integrator & Sound Engineer / Editor</strong> – Signal Space, Montréal</td>
-                </tr>
-                <tr>
-                    <td class="date-col">2015 - 2016</td>
-                    <td><strong>Sound Mixer</strong> – Syllabes, Montréal</td>
-                </tr>
-                <tr>
-                    <td class="date-col">2013</td>
-                    <td>
-                        <strong>Audio & Voice Designer Intern</strong> – Ubisoft Montréal
-                        <p style="font-size: 14px; color: #555; margin-top: 2px;">Project « Shine » during the Ubisoft Academia summer school.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="date-col">Other Roles</td>
-                    <td>
-                        <strong>Sound Recordist & Field Production</strong>
-                        <ul class="resume-list">
-                            <li>Sound recordist for the TV pilot « Bienvenue » (submitted to Radio-Canada).</li>
-                            <li>Production sound and recording for various Montreal shoots, including the « ReROLL Announcement Trailer ».</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-        </section>
+        <p style="padding-left: 5px; text-indent: 0pt; line-height: 15pt; text-align: left;">Montréal - (514) 621-4310 &nbsp;&nbsp;|&nbsp;&nbsp; languages: French, Italian, English</p>
+        <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 25px;">
+            <a href="mailto:valentino.lercher@gmail.com" class="a">valentino.lercher@gmail.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="http://www.valentinolercher.com/" class="a" target="_blank">www.valentinolercher.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="https://www.linkedin.com/in/valentino-lercher-67751661" class="a" target="_blank">LinkedIn</a>
+        </p>
 
-        <section class="resume-section">
-            <h3>Skills & Tools</h3>
-            <ul class="resume-list">
-                <li><strong>Video Game Sound Design:</strong> Foley artistry, custom sound effects (SFX) creation, immersive soundscaping, voice-over design.</li>
-                <li><strong>Location & Studio Recording:</strong> Advanced sound effects gathering, field recording, and voice tracking.</li>
-                <li><strong>Technical Pipeline Tools:</strong> Pro Tools, Reaper, Perforce, Unreal Engine, Wwise.</li>
-            </ul>
-        </section>
+        <p style="text-indent: 0pt; text-align: left; margin-bottom: 10px;">
+            <span><img width="372" height="38" alt="Section Shipped games" src="../img/Image_003.png"/></span>
+        </p>
+        
+        <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 8px;">Shipped games</h3>
+        
+        <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 6px; line-height: 14pt;">
+            <strong>South of Midnight</strong> - Sound Designer / Audio Designer - audio implementation (Wwise), Compulsion Games
+        </p>
+        <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 6px; line-height: 14pt;">
+            <strong>We happy few</strong> - Sound Designer / Audio Designer - audio implementation (Wwise), Compulsion Games
+        </p>
+        <p style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 6px; line-height: 14pt;">
+            <strong>Civilization VI</strong> - Audio editor, (Firaxis Games) (PC)
+        </p>
+        <p style="padding-left: 5px; text-indent: 0pt; line-height: 14pt; text-align: left; margin-bottom: 15px;">
+            <strong>Ninja Turtles Legends</strong> - Audio Editor, (Ludia) (Phone)
+        </p>
 
-        <section class="resume-section">
-            <h3>Academics & Training</h3>
-            <table class="resume-table">
-                <tr>
-                    <td class="date-col">2014 - 2015</td>
-                    <td><strong>Minor in Video Game Studies</strong> – UdeM (Université de Montréal)</td>
-                </tr>
-                <tr>
-                    <td class="date-col">2012 - 2013</td>
-                    <td><strong>Specialized Training in Video Game Sound Design</strong> – ISTDS (Institut Supérieur des Techniques de Design Sonore), Montréal</td>
-                </tr>
-                <tr>
-                    <td class="date-col">2010 - 2012</td>
-                    <td><strong>Sound Design Technician Diploma</strong> – ACFA Multimedia, Montpellier, France</td>
-                </tr>
-                <tr>
-                    <td class="date-col">2011</td>
-                    <td>
-                        <strong>Research & Applied Assistantships</strong>
-                        <ul class="resume-list">
-                            <li>Study of sound impact on the underwater environment for the Italian Marine Corps (Livorno, Italy).</li>
-                            <li>Production Assistant at DBW Communication (Movie & 3D Video Production, Rome, Italy).</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="date-col">2010</td>
-                    <td><strong>French Baccalaureate in Social Economics</strong> – Lycée Chateaubriand, Rome, Italy <span style="color:#666; font-size:13px;">(Equivalent to two years post-secondary / CEGEP)</span></td>
-                </tr>
-            </table>
-        </section>
+        <p style="text-indent: 0pt; text-align: left; margin-bottom: 10px;">
+            <span><img width="373" height="38" alt="Section Dialogue Recording" src="../img/Image_004.png"/></span>
+        </p>
+        <p style="padding-left: 5px; text-indent: 0pt; line-height: 15pt; text-align: left; margin-bottom: 25px;">
+            <strong>Horizon Zero Dawn</strong> - Dialogue recording (PS4) french version, Around the word Canada, Guerrilla Games
+        </p>
 
-<!-- Bouton discret de téléchargement du PDF -->
-        <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px dashed #25408F;">
-            <a href="Resume_Valentino_LERCHER_2026.pdf" download="Resume_Valentino_LERCHER_2026.pdf" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #ffffff; color: #25408F; border: 2px solid #25408F; border-radius: 4px; font-family: 'Calibri', sans-serif; font-size: 15px; font-weight: bold; text-decoration: none; transition: all 0.3s ease;">
-                <span style="margin-right: 8px;">📥</span> Download Resume (PDF)
-            </a>
-        </div>
+        <p class="s2" style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Professional experience</p>
+        
+        <table class="cv-table">
+            <tr>
+                <td style="width: 85px;" class="s3">2022-26</td>
+                <td class="s3"><ul class="cv-list"><li><p class="s3">Senior Audio Designer at Compulsion Games</p></li></ul></td>
+            </tr>
+            <tr>
+                <td class="s3">2019-22</td>
+                <td class="s3"><ul class="cv-list"><li><p class="s3">Audio Designer at Compulsion Games, Montréal</p></li></ul></td>
+            </tr>
+            <tr>
+                <td class="s3">2015-18</td>
+                <td class="s3"><ul class="cv-list"><li><p class="s3">Audio Integrator, Sound Engineer/Editor at Signal Space, Montréal</p></li></ul></td>
+            </tr>
+            <tr>
+                <td class="s3">2015-16</td>
+                <td class="s3"><ul class="cv-list"><li><p class="s3">Sound Mixer at Syllabes, Montréal</p></li></ul></td>
+            </tr>
+            <tr>
+                <td class="s3" style="vertical-align: top;">2013</td>
+                <td class="s3">
+                    <ul class="cv-list">
+                        <li><p class="s3">Internship at Ubisoft Montréal as audio designer and voice designer for the project «Shine» during the Ubisoft Academia summer school</p></li>
+                        <li style="margin-top: 4px;"><p class="s3">Sound recordist of the pilot «Bienvenue», offered to Radio-Canada for production consideration</p></li>
+                        <li style="margin-top: 4px;"><p class="s3">Other shooting sessions in Montreal, including the video «ReROLL Announcement Trailer»</p></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
 
+        <p style="text-indent: 0pt; text-align: left; margin-top: 20px; margin-bottom: 10px;">
+            <span><img width="372" height="38" alt="Section Skills" src="../img/Image_005.png"/></span>
+        </p>
+        <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Skills</h3>
+        
+        <ul class="cv-list" style="padding-left: 5px; margin-bottom: 25px;">
+            <li style="margin-bottom: 4px;"><p class="s3">Video sound design: Foley, sound effects, soundscaping, voice</p></li>
+            <li style="margin-bottom: 4px;"><p class="s3">Sound recording: sound effects, voice</p></li>
+            <li><p class="s3">Working knowledge of: Protools, Reaper, Perforce, Unreal Engine, Wwise</p></li>
+        </ul>
 
-    </main>
+        <p style="text-indent: 0pt; text-align: left; margin-bottom: 10px;">
+            <span><img width="372" height="38" alt="Section Academics" src="../img/Image_006.png"/></span>
+        </p>
+        <h3 style="padding-left: 5px; text-indent: 0pt; text-align: left; margin-bottom: 10px;">Academics</h3>
+
+        <table class="cv-table">
+            <tr>
+                <td style="width: 85px;" class="s3">2014-15</td>
+                <td class="s3">Minor in Video Game Studies UDeM - University of Montreal</td>
+            </tr>
+            <tr>
+                <td class="s3" style="vertical-align: top;">2012-13</td>
+                <td class="s3">Specialized training as sound designer of videogames at ISTDS - Institut Supérieur des techniques de design sonore, Montréal</td>
+            </tr>
+            <tr>
+                <td class="s3">2010-12</td>
+                <td class="s3">Sound design technician diploma, ACFA Multimedia, Montpellier, France</td>
+            </tr>
+            <tr>
+                <td class="s3" style="vertical-align: top;">2011</td>
+                <td class="s3">
+                    <ul class="cv-list">
+                        <li style="margin-bottom: 4px;"><p class="s3">Study of sound impact on the underwater environment for the Italian marine corps, Livorno, Italy</p></li>
+                        <li><p class="s3">Assistant at DBW Communication (movie and 3D-video production), Rome, Italy</p></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="s3" style="vertical-align: top;">2010</td>
+                <td class="s3">French baccalaureate in social economy, Lycée Chateaubriand, Rome, Italy (equivalent to two years post-secondary)</td>
+            </tr>
+        </table>
+
+    </div>
 
 </body>
 </html>
