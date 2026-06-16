@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Valentino LERCHER</title>
+    <link rel="icon" type="image/x-icon" href="http://valentino.lercher.free.fr/0utils/img/Icone_val.ico">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="secondary-body">
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index_fr.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="mentions.html">Mentions</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-page">
+        <h1>Pour me contacter</h1>
+        
+        <form action="envoi.php" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <span>(Merci d'indiquer vos nom et prénom)</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Courriel :</label>
+                <input type="email" id="email" name="email" required>
+                <span>(Pensez à vérifier que l'adresse soit correcte)</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Envoyer</button>
+        </form>
+
+        <div class="contact-info">
+            <p><strong>Valentino LERCHER</strong></p>
+            <p>valentino.lercher@gmail.com</p>
+            <p>+1 (514) 621 4310</p>
+            <p>MONTREAL, QC, Canada</p>
+        </div>
+    </main>
+
+</body>
+</html>
