@@ -16,7 +16,7 @@
   /* ── Téléphone ── */
   var telEl = document.getElementById('tel-display');
   if (telEl) {
-    telEl.textContent = tel; // Affiche "(514) 62 1-431 0"
+    telEl.textContent = tel; 
     
     // Au clic, on nettoie la variable 'tel' pour le protocole tel:
     telEl.addEventListener('click', function () {
