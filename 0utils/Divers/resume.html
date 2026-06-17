@@ -1,154 +1,15 @@
 <!DOCTYPE html>
+<!-- EURIA --!>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Valentino LERCHER - Senior Audio Designer</title>
-    <style type="text/css">
-        /* --- 01h 17 INTEGRATION DU MENU EXACT DE INDEX / MENTIONS --- */
-        .main-nav {
-            position: fixed !important;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999 !important;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .nav-right-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 40px;
-            box-sizing: border-box;
-        }
-        .main-nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end; /* Aligné à droite */
-        }
-        .main-nav li {
-            margin-left: 25px;
-        }
-        .main-nav li a {
-            color: #231F20;
-            text-decoration: none;
-            font-family: Calibri, sans-serif !important;
-            font-size: 16px;
-            font-weight: normal !important; /* Strictement normal/fin comme mentions.html */
-            padding: 5px 0;
-            transition: color 0.2s;
-        }
-        .main-nav li a:hover, .main-nav li a.active {
-            color: #00AEEF; /* Changement de couleur uniquement, pas de gras */
-        }
-
-        /* --- STRUCTURE DU RESTE DE LA PAGE --- */
-        * { margin: 0; padding: 0; text-indent: 0; }
-        
-        body.secondary-body {
-            background-color: #1a1a1a !important; /* Fond noir extérieur */
-            padding-top: 70px;
-        }
-        
-        /* Conteneur blanc du CV */
-        .resume-page-container {
-            max-width: 850px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
-        }
-
-        /* Calibri Bold strict pour l'intérieur du CV uniquement */
-        h1, h2, h3, .s1, .s2, .section-title-text, strong {
-            font-family: Calibri, sans-serif !important;
-            font-weight: bold !important;
-        }
-
-        .s1 { color: #25408F; font-size: 19pt; text-decoration: none; }
-        h1 { color: #25408F; font-size: 31pt; }
-        h2 { color: #00AEEF; font-size: 19pt; }
-        p, .s3, .a, a { color: #231F20; font-family: Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; margin: 0pt; }
-        
-        /* Barre décorative haute (Image_001.png) */
-        .top-decorative-bar {
-            width: calc(100% + 80px);
-            margin-left: -40px;
-            margin-right: -40px;
-            margin-bottom: 25px;
-            display: block;
-        }
-        .top-decorative-bar img {
-            width: 100%;
-            height: auto;
-            max-height: 15px;
-            display: block;
-        }
-
-        /* Bandeaux de sections */
-        .section-banner-container {
-            width: calc(100% + 40px);
-            margin-left: -40px;
-            height: 38px;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            background-repeat: no-repeat;
-            background-size: 372px 38px;
-            background-position: left center;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Titres des bandeaux en bleu sombre */
-        .section-title-text {
-            color: #25408F !important;
-            font-size: 14pt;
-            padding-left: 45px;
-        }
-
-        /* Tableaux et coordonnées */
-        .contact-container-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 15px;
-            margin-top: 15px;
-        }
-        .contact-container-table td {
-            vertical-align: top;
-            padding: 2px 5px;
-        }
-
-        .cv-list { list-style: none; padding-left: 0pt; }
-        .cv-list > li > *:first-child:before { content: "• "; color: #231F20; font-family: Calibri, sans-serif; font-size: 12pt; }
-        
-        table, tbody { vertical-align: top; overflow: visible; }
-        .cv-table { border-collapse: collapse; width: 100%; margin-top: 10px; }
-        .cv-table td { padding-bottom: 8px; }
-
-        .header-cv-table { width: 100%; border-collapse: collapse; }
-        .header-cv-table td { vertical-align: middle; }
-
-        /* --- RESPONSIVE SMARTPHONE --- */
-        @media (max-width: 768px) {
-            body.secondary-body { padding-top: 60px; }
-            .resume-page-container { padding: 20px; margin: 10px; }
-            .top-decorative-bar { width: calc(100% + 40px); margin-left: -20px; margin-right: -20px; }
-            .section-banner-container { width: calc(100% + 20px); margin-left: -20px; background-size: 100% 38px; }
-            .section-title-text { padding-left: 25px; font-size: 12pt; }
-            .contact-container-table td { display: block; width: 100% !important; text-align: left !important; padding-bottom: 10px; }
-            .nav-right-container { padding: 10px 20px; }
-            .main-nav ul { justify-content: center; }
-            .main-nav li { margin: 0 10px; }
-            h1 { font-size: 22pt; }
-            h2 { font-size: 15pt; }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="secondary-body">
 
+    <!-- Menu : Plus de style en ligne, juste la structure HTML -->
     <nav class="main-nav">
         <div class="nav-right-container">
             <ul>
@@ -167,29 +28,31 @@
             <img alt="Ligne décorative" src="../img/Image_001.png"/>
         </div>
 
-        <table class="header-cv-table">
+        <table class="header-cv-table" style="width: 100%; border-collapse: collapse;">
             <tr>
-                <td>
+                <td style="width: 60%; vertical-align: top; padding-right: 20px;">
                     <h1 style="text-indent: 0pt; text-align: left;">Valentino LERCHER</h1>
                     <h2 style="text-indent: 0pt; text-align: left; margin-top: 5px;">Senior Audio Designer</h2>
+                    
+                    <table class="contact-container-table" style="margin-top: 15px;">
+                        <tr>
+                            <td style="text-align: left; line-height: 16pt;">
+                                <p>Montréal - (514) 621-4310</p>
+                                <p><a href="mailto:valentino.lercher@gmail.com" class="a">valentino.lercher@gmail.com</a></p>
+                                <p><a href="https://www.linkedin.com/in/valentino-lercher-67751661" class="a" target="_blank">LinkedIn</a></p>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
-                <td style="width: 95px; text-align: right;">
-                    <span><img width="82" height="82" alt="QRCode CV" src="../img/QRCode_CV.png"/></span>
-                </td>
-            </tr>
-        </table>
 
-        <table class="contact-container-table">
-            <tr>
-                <td style="text-align: left; line-height: 16pt;">
-                    <p>Montréal - (514) 621-4310</p>
-                    <p><a href="mailto:valentino.lercher@gmail.com" class="a">valentino.lercher@gmail.com</a></p>
-                    <p><a href="https://www.linkedin.com/in/valentino-lercher-67751661" class="a" target="_blank">LinkedIn</a></p>
-                </td>
-                <td style="text-align: right; line-height: 16pt; width: 320px;">
-                    <div style="display: inline-block; text-align: left;">
-                        <p>languages: French, Italian, English</p>
-                        <p><a href="http://www.valentinolercher.com/" class="a" target="_blank">www.valentinolercher.com</a></p>
+                <td style="width: 280px; text-align: left; vertical-align: top; padding-left: 20px; padding-top: 5px;">
+                    <img width="90" height="90" alt="QRCode CV" src="../img/QRCode_CV.png" style="display: block; margin-bottom: 10px;"/>
+                    
+                    <div style="font-size: 12pt; line-height: 1.4;">
+                        <p style="margin: 0 0 4px 0; font-weight: normal;">languages: French, Italian, English</p>
+                        <p style="margin: 0 0 0 0;">
+                            <a href="http://www.valentinolercher.com/" class="a" target="_blank" style="text-align: left; display: inline-block; text-align: left;">www.valentinolercher.com</a>
+                        </p>
                     </div>
                 </td>
             </tr>
@@ -291,7 +154,7 @@
         </table>
 
         <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px dashed #25408F;">
-            <a href="Resume_Valentino_LERCHER_2026.pdf" download="Resume_Valentino_LERCHER_2026.pdf" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #ffffff; color: #25408F; border: 2px solid #25408F; border-radius: 4px; font-family: 'Calibri', sans-serif; font-size: 15px; font-weight: bold; text-decoration: none; transition: all 0.3s ease;">
+            <a href="Resume_Valentino_LERCHER_2026.pdf" download="Resume_Valentino_LERCHER_2026.pdf" class="btn-download">
                 <span style="margin-right: 8px;">📥</span> Download Resume (PDF)
             </a>
         </div>
